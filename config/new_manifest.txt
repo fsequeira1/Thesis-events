@@ -1,0 +1,6 @@
+#[Content] = Meaning
+#[regex do content] = regex do meaning
+
+[(.*): .*] = [.*: (.*)]
+
+

@@ -1,0 +1,22 @@
+# Configuration file for syslog program
+[global]
+encodingAvro = true
+verbose = false
+printJSON = false
+
+[avro]
+eventT = "Other"
+
+[syslogprobe]
+Unixsocket = "/tmp/snort"
+UserAgent = "LogProbe"
+URI = "iads://nids.disney.dei.uc.pt"
+Meaning = "Intrusion Detection Message"
+Manifest_path = "new_manifest.txt"
+URIofType = "AvroCPIDSEvents.json"
+Type = "Other"
+
+[kafka]
+nbrokers = 3
+addrs = "mbroker1:9092 mbroker1:9093 mbroker1:9094"
+topic = "probeevents"
